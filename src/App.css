@@ -55,20 +55,14 @@ h4 {
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+  border-right: 10px solid #9c2828;
 }
 
-.money {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
-}
-
-.money.plus {
+.money-plus {
   color: #2ecc71;
 }
 
-.money.minus {
+.money-minus {
   color: #c0392b;
 }
 
