@@ -10,7 +10,7 @@ export default function Transaction({transaction}) {
     return (
         <div>
             <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-                    {transaction.text} <span> {sign}Rs. {Math.abs(transaction.amount)}</span> <button onClick={()=> deleteTransaction(transaction.id)} className="delete-btn"> X </button>
+                    {transaction.text} <span> {sign}Rs. {Math.abs(transaction.amount)}</span> <button onClick={()=> deleteTransaction(transaction._id)} className="delete-btn"> X </button>
                 </li>
         </div>
     )
