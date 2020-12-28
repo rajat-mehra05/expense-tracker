@@ -5,9 +5,16 @@ import IncomeExpense from './components/IncomeExpense';
 import TransactionList from './components/TransactionList';
 import AddTransaction from './components/AddTransaction';
 import { GlobalProvider } from './components/context/GlobalState';
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
+import Contact from './components/Contact'
 
 function App() {
   return (
+    <Router>
+    <Route exact path="/" render={props => (
     <GlobalProvider>
         <Header />
     <div className="container">
@@ -17,6 +24,9 @@ function App() {
       <AddTransaction />
     </div>
     </GlobalProvider>
+    )} />
+    <Route path="/contact" component={Contact} />
+    </Router>
   );
 }
 

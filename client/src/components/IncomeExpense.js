@@ -22,7 +22,7 @@ export default function IncomeExpense() {
                 </div>
                 <div>
                     <h4> Expense</h4>
-                    <p className="money-minus"> Rs. {expense}</p>
+                   <p className="money-minus"> Rs. {expense}</p>
                 </div>
             </div>
         </>

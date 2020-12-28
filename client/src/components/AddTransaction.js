@@ -1,11 +1,18 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from './context/GlobalState'
+import {Link} from 'react-router-dom'
+
+const getStyle = {
+    color: 'brown',
+    fontSize: '1.5rem',
+}
 
 export default function AddTransaction() {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
 
     const { addTransaction } = useContext(GlobalContext)
+    
     const onSubmit = e => {
         e.preventDefault();
 
@@ -28,11 +35,12 @@ export default function AddTransaction() {
              </div>
              <div className="form-control">
                 <label for="amount"> Amount <br />
-                 (Negative - expense, Postive - income) </label>
+                 '-' for Expense and '+' for Income </label>
                 <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter Amount..." />
              </div>
              <button className="btn"> Add Transaction</button>
          </form>
+         <Link to="/contact" style={getStyle}>Contact Me</Link> 
         </>
     )
 }
