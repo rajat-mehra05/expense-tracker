@@ -25,7 +25,8 @@ export const GlobalProvider = ({children}) => {
             dispatch({
                 type: 'GET_TRANSACTIONS',
                 payload: res.data.data
-            });
+            })
+            localStorage.setItem('data', res.data.data)
         } catch (err) {
             dispatch({
                 type: 'TRANSACTIONS_ERROR',
